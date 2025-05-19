@@ -38,8 +38,8 @@ namespace Diplom
                 TxtContractNumber.Text = _editingOrder.OrderID.ToString();
                 TxtOrderName.Text = _editingOrder.OrderName;
                 TxtNotes.Text = _editingOrder.OrderDescription;
-                DpStartDate.SelectedDate = _editingOrder.OrderDateStart;
-                DpEndDate.SelectedDate = _editingOrder.OrderDateFinish;
+                DpStartDate.SelectedDate = _editingOrder.OrderDateStart ?? DateTime.Today;
+                DpEndDate.SelectedDate = _editingOrder.OrderDateFinish ?? DateTime.Today.AddDays(7);
 
                 var connection = _context.Connections.FirstOrDefault(c => c.OrderID == _editingOrder.OrderID);
                 if (connection != null)
@@ -87,8 +87,8 @@ namespace Diplom
 
             _editingOrder.OrderName = TxtOrderName.Text.Trim();
             _editingOrder.OrderDescription = TxtNotes.Text.Trim();
-            _editingOrder.OrderDateStart = (DateTime)DpStartDate.SelectedDate;
-            _editingOrder.OrderDateFinish = (DateTime)DpEndDate.SelectedDate;
+            _editingOrder.OrderDateStart = (DateTime)(DpStartDate.SelectedDate ?? DateTime.Today);
+            _editingOrder.OrderDateFinish = (DateTime)(DpEndDate.SelectedDate ?? DateTime.Today.AddDays(7));
 
             int orderId;
 

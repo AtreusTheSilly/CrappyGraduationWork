@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "T:\\VisualStudio_Projects\\Diplom\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\addorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\addorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\employeelistwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\addemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\addemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\wordprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\wordprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\addemployeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -36,6 +40,19 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Order.cs",
+              "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Diplom\\Models\\Order.cs",
+              "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\Models\\Order.cs",
+              "RelativeToolTip": "Diplom\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:59:42.479Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -58,7 +75,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "AddOrderWindow.xaml.cs",
+              "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddOrderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Diplom\\AddOrderWindow.xaml.cs",
+              "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddOrderWindow.xaml.cs",
+              "RelativeToolTip": "Diplom\\AddOrderWindow.xaml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:59:06.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "EmployeeListWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\EmployeeListWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\EmployeeListWindow.xaml.cs",
@@ -66,25 +96,24 @@
               "RelativeToolTip": "Diplom\\EmployeeListWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:37:17.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T18:37:17.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\MainWindow.xaml.cs",
               "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\MainWindow.xaml.cs",
               "RelativeToolTip": "Diplom\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAA0wCMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T17:09:42.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AddEmployeeWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\AddEmployeeWindow.xaml.cs",
@@ -92,8 +121,7 @@
               "RelativeToolTip": "Diplom\\AddEmployeeWindow.xaml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:48:37.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T10:48:37.707Z"
             },
             {
               "$type": "Document",
@@ -109,28 +137,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WordProcessor.cs",
-              "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\WordProcessor.cs",
-              "RelativeDocumentMoniker": "Diplom\\WordProcessor.cs",
-              "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\WordProcessor.cs",
-              "RelativeToolTip": "Diplom\\WordProcessor.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAewLAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T19:35:28.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AddEmployeeWindow.xaml",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml",
               "RelativeDocumentMoniker": "Diplom\\AddEmployeeWindow.xaml",
               "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml",
               "RelativeToolTip": "Diplom\\AddEmployeeWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T16:54:49.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T16:54:49.547Z"
             }
           ]
         }
