@@ -1,0 +1,73 @@
+﻿<Window x:Class="Diplom.AddEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="Редактирование сотрудника" Height="550" Width="500" MinHeight="550" MinWidth="500" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Панель для физического заказчика -->
+        <StackPanel x:Name="PhysicalCustomerPanel" Grid.Row="1" Margin="0 5">
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="ФИО:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtFullName" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Серия паспорта:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtPassportSeries" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Номер паспорта:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtPassportNumber" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Кем выдан паспорт:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtPassportIssuedBy" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Дата выдачи:" Width="150" VerticalAlignment="Center"/>
+                <DatePicker x:Name="DpPassportDate" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Адрес регистрации:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtRegistration" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Адрес проживания:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtAddress" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="ИНН:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtINN" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="СНИЛС:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtSNILS" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Почтовый индекс:" Width="150" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtPost" Width="300" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0 10 0 0">
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Телефон:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="TxtPhone" Width="300" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Label Content="Email:" Width="150" VerticalAlignment="Center" />
+                <TextBox x:Name="TxtEmail" Width="300" />
+            </StackPanel>
+
+            <Button Content="Сохранить" Click="SaveEmployee_Click" Margin="0 10 0 0" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+    </Grid>
+</Window>

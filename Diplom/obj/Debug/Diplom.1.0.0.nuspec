@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Diplom</id>
+    <version>1.0.0</version>
+    <authors>Diplom</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="9.0.4" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="9.0.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="T:\VisualStudio_Projects\Diplom\Diplom\bin\Debug\net8.0-windows\Diplom.runtimeconfig.json" target="lib\net8.0-windows7.0\Diplom.runtimeconfig.json" />
+    <file src="T:\VisualStudio_Projects\Diplom\Diplom\bin\Debug\net8.0-windows\Diplom.dll" target="lib\net8.0-windows7.0\Diplom.dll" />
+  </files>
+</package>

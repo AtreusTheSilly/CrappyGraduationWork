@@ -1,0 +1,64 @@
+﻿<Window x:Class="Diplom.AddOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="Редактирование заказа" Height="370" MinHeight="370" Width="750" MinWidth="700" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель с полями -->
+        <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,0,0,10">
+            <!-- Номер заказа -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Номер договора:" Width="130" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtContractNumber" Width="200" IsReadOnly="True"/>
+            </StackPanel>
+
+            <!-- Выбор сотрудника -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сотрудник-исполнитель:" Width="150" VerticalAlignment="Center"/>
+                <ComboBox x:Name="CmbEmployees" Width="200" DisplayMemberPath="FullName" 
+                          SelectedValuePath="EmployeeID" SelectionChanged="CmbEmployees_SelectionChanged" IsEditable="True"/>
+                <Button Content="Новый сотрудник" Width="120" Margin="10,0,0,0" Click="BtnNewEmployee_Click"/>
+            </StackPanel>
+
+            <!-- Даты -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Дата начала:" Width="130" VerticalAlignment="Center"/>
+                <DatePicker x:Name="DpStartDate" Width="200"/>
+                <Label Content="Дата окончания:" Width="130" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <DatePicker x:Name="DpEndDate" Width="200"/>
+            </StackPanel>
+
+            <!-- Статус -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Выполнено:" Width="80" VerticalAlignment="Center"/>
+                <CheckBox x:Name="IsDoneChk" Margin="5,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Название заказа -->
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,5">
+                <Label Content="Название заказа:" Width="130" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtOrderName" Width="500"/>
+            </StackPanel>
+
+            <!-- Примечания -->
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Примечания:" Width="130" VerticalAlignment="Top"/>
+                <TextBox x:Name="TxtNotes" Width="500" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Кнопка Сохранить (Grid.Row=1) -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
+            <Button Content="Сохранить" Width="100" Margin="5" Click="BtnSaveContract_Click"/>
+            <Button Content="Отмена" Width="80" Margin="5" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
