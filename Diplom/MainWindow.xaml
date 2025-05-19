@@ -34,6 +34,7 @@
                 <Button x:Name="BtnDeleteContract" Content="-заказ" MinWidth="70" Margin="5,5,50,5" Click="BtnDeleteContract_Click"/>
                 <Button x:Name="BtnCreateEmployee" Content="+сотрудник" MinWidth="70" Margin="5" Click="BtnCreateEmployee_Click"/>
                 <Button x:Name="BtnDeleteEmployee" Content="-сотрудник" MinWidth="70" Margin="5" Click="BtnDeleteEmployee_Click"/>
+                <Button x:Name="BtnSeeEmployees" Content="все сотрудники" MinWidth="70" Margin="5" Click="BtnSeeEmployees_Click"/>
             </StackPanel>
         </StackPanel>
 

@@ -33,7 +33,6 @@ namespace Diplom
         {
             try
             {
-                MessageBox.Show("Открывается", "ОТКРОЙСЯ", MessageBoxButton.OK, MessageBoxImage.Warning);
                 _context = new AppDbContext();
                 LoadData();
             }
@@ -281,6 +280,25 @@ namespace Diplom
                 _context.Employees.Remove(employee);
                 _context.SaveChanges();
                 LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+        }
+
+        private void BtnSeeEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                EmployeeListWindow window = new EmployeeListWindow();
+                this.IsEnabled = false;
+                if (window.ShowDialog() == true)
+                {
+                    LoadData();
+                }
+                this.IsEnabled = true;
             }
             catch (Exception ex)
             {

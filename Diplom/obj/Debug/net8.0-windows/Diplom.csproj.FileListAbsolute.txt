@@ -72,3 +72,5 @@ T:\VisualStudio_Projects\Diplom\Diplom\bin\Debug\net8.0-windows\DocumentFormat.O
 T:\VisualStudio_Projects\Diplom\Diplom\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
 T:\VisualStudio_Projects\Diplom\Diplom\bin\Debug\net8.0-windows\System.IO.Packaging.dll
 T:\VisualStudio_Projects\Diplom\Diplom\obj\Debug\net8.0-windows\Diplom.sourcelink.json
+T:\VisualStudio_Projects\Diplom\Diplom\obj\Debug\net8.0-windows\EmployeeListWindow.baml
+T:\VisualStudio_Projects\Diplom\Diplom\obj\Debug\net8.0-windows\EmployeeListWindow.g.cs

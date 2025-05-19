@@ -11,6 +11,8 @@ namespace Diplom.Models
         public int OrderID { get; set; }
         public string OrderName { get; set; } = null!;
         public string OrderDescription { get; set; } = null!;
+        public DateTime OrderDateStart { get; set; }
+        public DateTime OrderDateFinish { get; set; }
 
         // Навигационное свойство
         public ICollection<Connection> Connections { get; set; } = new List<Connection>();
