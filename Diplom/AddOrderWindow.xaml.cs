@@ -152,7 +152,7 @@ namespace Diplom
         private void BtnNewEmployee_Click(object sender, RoutedEventArgs e)
         {
             // Открываем окно для создания нового сотрудника
-            AddEmployeeWindow window = new AddEmployeeWindow();
+            AddEmployeeWindow window = new AddEmployeeWindow(null, _context);
             // Блокируем основное окно, пока открыто новое
             this.IsEnabled = false;
 

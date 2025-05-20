@@ -236,7 +236,7 @@ namespace Diplom
         {
             try
             {
-                AddEmployeeWindow window = new AddEmployeeWindow();
+                AddEmployeeWindow window = new AddEmployeeWindow(null, _context);
                 this.IsEnabled = false;
                 if (window.ShowDialog() == true)
                 {

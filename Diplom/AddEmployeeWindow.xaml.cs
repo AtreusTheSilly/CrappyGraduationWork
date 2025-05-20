@@ -20,6 +20,7 @@ namespace Diplom
             if (employee == null)
             {
                 _context = new AppDbContext();
+                return;
             }
 
             // Заполняем поля данными существующего сотрудника
