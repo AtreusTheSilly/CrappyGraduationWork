@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "T:\\VisualStudio_Projects\\Diplom\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\addemployeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\addemployeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|t:\\visualstudio_projects\\diplom\\diplom\\addemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B1A8A89-E904-4802-99A7-4E3E04EAE061}|Diplom\\Diplom.csproj|solutionrelative:diplom\\addemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +50,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "AddEmployeeWindow.xaml",
+              "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml",
+              "RelativeDocumentMoniker": "Diplom\\AddEmployeeWindow.xaml",
+              "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml",
+              "RelativeToolTip": "Diplom\\AddEmployeeWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T14:47:36.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AddOrderWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddOrderWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\AddOrderWindow.xaml.cs",
@@ -54,12 +70,11 @@
               "RelativeToolTip": "Diplom\\AddOrderWindow.xaml.cs",
               "ViewState": "AgIAAMQAAAAAAAAAAAAYwJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:40:33.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T14:40:33.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\MainWindow.xaml.cs",
@@ -67,18 +82,17 @@
               "RelativeToolTip": "Diplom\\MainWindow.xaml.cs",
               "ViewState": "AgIAAEkBAAAAAAAAAADwvysBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:39:27.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T14:39:27.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AddEmployeeWindow.xaml.cs",
               "DocumentMoniker": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml.cs",
               "RelativeDocumentMoniker": "Diplom\\AddEmployeeWindow.xaml.cs",
               "ToolTip": "T:\\VisualStudio_Projects\\Diplom\\Diplom\\AddEmployeeWindow.xaml.cs",
               "RelativeToolTip": "Diplom\\AddEmployeeWindow.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxYAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T13:37:40.945Z",
               "EditorCaption": ""
