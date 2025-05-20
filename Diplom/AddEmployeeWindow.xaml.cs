@@ -21,6 +21,7 @@ namespace Diplom
 
             // Заполняем поля данными существующего сотрудника
             TxtFullName.Text = employee.FullName;
+            DpBirthDate.SelectedDate = employee.EmployeeBirthDate ?? DateTime.Today;
             TxtPassportSeries.Text = employee.PassportSeries;
             TxtPassportNumber.Text = employee.PassportNumber;
             TxtPassportIssuedBy.Text = employee.PassportGivenBy;
@@ -60,6 +61,7 @@ namespace Diplom
             try
             {
                 // Запоняем поля сотрудника данными, полученными от пользователя
+                newEmployee.EmployeeBirthDate = DpBirthDate.SelectedDate ?? DateTime.Today;
                 newEmployee.NumberPhone = TxtPhone.Text.Trim();
                 newEmployee.Adress = TxtAddress.Text.Trim();
                 newEmployee.Email = TxtEmail.Text.Trim();

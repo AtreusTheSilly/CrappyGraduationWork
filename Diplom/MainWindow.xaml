@@ -5,55 +5,86 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom"
         mc:Ignorable="d"
-        Title="Главное окно" Height="700" Width="1200"
-        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="Главное окно"
+        Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
     <Grid Margin="10">
-        <!-- Определяем две строки: первая – панель управления, вторая – основной контент -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <!-- Панель управления -->
             <RowDefinition Height="*"/>
+            <!-- Основной контент -->
         </Grid.RowDefinitions>
 
-        <!-- Панель управления: фильтр, поиск и кнопки управления -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,5">
-            <!-- Критерий поиска -->
-            <ComboBox x:Name="SearchTypeComboBox" MinWidth="100" Margin="0,0,10,0" SelectedIndex="0" SelectionChanged="SearchTypeComboBox_SelectionChanged">
-                <ComboBoxItem Content="По заказу" IsSelected="True"/>
-                <ComboBoxItem Content="По сотруднику"/>
-            </ComboBox>
+        <!-- Панель управления -->
+        <DockPanel Grid.Row="0" LastChildFill="True" Margin="0,0,0,5">
 
-            <!-- Текст для поиска -->
-            <TextBox x:Name="SearchTextBox" Width="200" Margin="0,0,10,0" 
-               VerticalContentAlignment="Center"
-               ToolTip="Введите текст поиска"
-               Text="" TextChanged="SearchTextBox_TextChanged" />
+            <!-- Поисковая панель -->
+            <StackPanel Orientation="Horizontal" Margin="5" DockPanel.Dock="Left" VerticalAlignment="Center">
+                <ComboBox x:Name="SearchTypeComboBox"
+                          MinWidth="120" Margin="0,0,10,0"
+                          SelectedIndex="0"
+                          SelectionChanged="SearchTypeComboBox_SelectionChanged">
+                    <ComboBoxItem Content="По заказу" IsSelected="True"/>
+                    <ComboBoxItem Content="По сотруднику"/>
+                </ComboBox>
 
-            <!-- Кнопки управления (отображаются справа) -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="BtnCreateContract" Content="+заказ" MinWidth="70" Margin="5" Click="BtnCreateContract_Click"/>
-                <Button x:Name="BtnDeleteContract" Content="-заказ" MinWidth="70" Margin="5,5,50,5" Click="BtnDeleteContract_Click"/>
-                <Button x:Name="BtnCreateEmployee" Content="+сотрудник" MinWidth="70" Margin="5" Click="BtnCreateEmployee_Click"/>
-                <Button x:Name="BtnDeleteEmployee" Content="-сотрудник" MinWidth="70" Margin="5" Click="BtnDeleteEmployee_Click"/>
-                <Button x:Name="BtnSeeEmployees" Content="все сотрудники" MinWidth="70" Margin="5" Click="BtnSeeEmployees_Click"/>
+                <TextBox x:Name="SearchTextBox"
+                         Width="250" Margin="0,0,10,0"
+                         VerticalContentAlignment="Center"
+                         ToolTip="Введите текст для поиска"
+                         TextChanged="SearchTextBox_TextChanged"/>
             </StackPanel>
-        </StackPanel>
+
+            <!-- Кнопки управления -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="10,0,0,0">
+
+                <!-- Группа: Заказы -->
+                <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5" Margin="0,0,10,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnCreateContract" Content="+ заказ" Width="90" Margin="5,0" Click="BtnCreateContract_Click"/>
+                        <Button x:Name="BtnDeleteContract" Content="- заказ" Width="90" Margin="5,0" Click="BtnDeleteContract_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Группа: Сотрудники -->
+                <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5" Margin="0,0,10,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnCreateEmployee" Content="+ сотрудник" Width="100" Margin="5,0" Click="BtnCreateEmployee_Click"/>
+                        <Button x:Name="BtnDeleteEmployee" Content="- сотрудник" Width="100" Margin="5,0" Click="BtnDeleteEmployee_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Отдельная кнопка -->
+                <Button x:Name="BtnSeeEmployees" Content="все сотрудники" Width="120" Margin="5,0" Click="BtnSeeEmployees_Click"/>
+            </StackPanel>
+
+        </DockPanel>
 
         <!-- Основной контент -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
+                <!-- Таблица -->
                 <ColumnDefinition Width="*"/>
+                <!-- Подробности -->
             </Grid.ColumnDefinitions>
 
-            <!-- Левая колонка: DataGrid со списком договоров -->
+            <!-- Таблица заказов -->
             <DataGrid x:Name="MainDataGrid"
-                Grid.Column="0"
-                AutoGenerateColumns="False"
-                IsReadOnly="True"
-                CanUserAddRows="False"
-                AlternationCount="2"
-                Margin="5"
-                SelectionChanged="MainDataGrid_SelectionChanged" SelectionMode="Single" MouseDoubleClick="MainDataGrid_MouseDoubleClick">
+                      Grid.Column="0"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      AlternationCount="2"
+                      Margin="5"
+                      SelectionMode="Single"
+                      SelectionChanged="MainDataGrid_SelectionChanged"
+                      MouseDoubleClick="MainDataGrid_MouseDoubleClick">
+
+                <!-- Окраска строк по статусу -->
                 <DataGrid.RowStyle>
                     <Style TargetType="DataGridRow">
                         <Style.Triggers>
@@ -66,24 +97,31 @@
                         </Style.Triggers>
                     </Style>
                 </DataGrid.RowStyle>
+
+                <!-- Колонки -->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="№" Binding="{Binding OrderID}" Width="Auto"/>
                     <DataGridTextColumn Header="Заказ" Binding="{Binding OrderName}" Width="2*"/>
                     <DataGridTextColumn Header="Исполнитель" Binding="{Binding EmployeeName}" Width="2*"/>
                 </DataGrid.Columns>
 
+                <!-- Контекстное меню -->
                 <DataGrid.ContextMenu>
-                    <ContextMenu x:Name="MainDataGridContextMenu">
+                    <ContextMenu>
                         <MenuItem Header="Открыть файл заказа" Click="MenuItem_OpenOrder_Click"/>
                     </ContextMenu>
                 </DataGrid.ContextMenu>
             </DataGrid>
 
-            <!-- Правая колонка: подробная информация о выбранном заказе -->
-            <StackPanel Grid.Column="1" Margin="5" Orientation="Vertical">
-                <!-- Примечания заказа -->
+            <!-- Правая панель: Примечания -->
+            <StackPanel Grid.Column="1" Margin="10,5" VerticalAlignment="Stretch">
                 <TextBlock Text="Примечания:" FontWeight="Bold" Margin="0,0,0,5"/>
-                <TextBox x:Name="NotesTextBox" Height="300" IsReadOnly="True" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                <TextBox x:Name="NotesTextBox"
+                         Height="300"
+                         TextWrapping="Wrap"
+                         IsReadOnly="True"
+                         VerticalScrollBarVisibility="Auto"
+                         AcceptsReturn="True"/>
             </StackPanel>
         </Grid>
     </Grid>

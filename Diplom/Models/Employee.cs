@@ -17,6 +17,7 @@ namespace Diplom.Models
         public string PassportNumber { get; set; } = null!;
         public string PassportGivenBy { get; set; } = null!;
         public DateTime? PassportGivenDateGivenBy { get; set; } = DateTime.Now;
+        public DateTime? EmployeeBirthDate {  get; set; } = DateTime.Now;
         public string Registration { get; set; } = null!;
         public string INN { get; set; } = null!;
         public string SNILS { get; set; } = null!;
