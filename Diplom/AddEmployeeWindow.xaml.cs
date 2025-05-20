@@ -8,16 +8,19 @@ namespace Diplom
 {
     public partial class AddEmployeeWindow : Window
     {
-        private AppDbContext _context = new AppDbContext();
+        private AppDbContext? _context;
 
         Employee? _editingEmployee = null;
 
-        public AddEmployeeWindow(Employee? employee = null)
+        public AddEmployeeWindow(Employee? employee = null, AppDbContext? context = null)
         {
             InitializeComponent();
 
             // Если передан сотрудник, то мы редактируем уже существующего
-            if (employee == null) return;
+            if (employee == null)
+            {
+                _context = new AppDbContext();
+            }
 
             // Заполняем поля данными существующего сотрудника
             TxtFullName.Text = employee.FullName;
@@ -35,69 +38,68 @@ namespace Diplom
             TxtPost.Text = employee.Post;
 
             _editingEmployee = employee;
+            _context = context;
         }
 
         private void SaveEmployee_Click(object sender, RoutedEventArgs e)
         {
-            Employee newEmployee;
+            Employee employee;
 
-            // Если редактируем сотрудника
             if (_editingEmployee != null)
             {
-                // находим существующего сотрудника в базе данных
-                newEmployee = _context.Employees.FirstOrDefault(c => c.EmployeeID == _editingEmployee!.EmployeeID);
-                if (newEmployee == null)
+                employee = _context.Employees.FirstOrDefault(c => c.EmployeeID == _editingEmployee.EmployeeID);
+                if (employee == null)
                 {
-                    MessageBox.Show("Служащий не найден", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Служащий не найден", 
+                                    "Ошибка", 
+                                    MessageBoxButton.OK, 
+                                    MessageBoxImage.Error);
                     return;
                 }
             }
-            // Если создаём нового сотрудника
             else
             {
-                newEmployee = new Employee();
+                employee = new Employee();
+                _context.Employees.Add(employee);
             }
 
             try
             {
-                // Запоняем поля сотрудника данными, полученными от пользователя
-                newEmployee.EmployeeBirthDate = DpBirthDate.SelectedDate ?? DateTime.Today;
-                newEmployee.NumberPhone = TxtPhone.Text.Trim();
-                newEmployee.Adress = TxtAddress.Text.Trim();
-                newEmployee.Email = TxtEmail.Text.Trim();
-                newEmployee.NumberPhone = TxtPhone.Text.Trim();
-                newEmployee.FullName = TxtFullName.Text.Trim();
-                newEmployee.PassportSeries = TxtPassportSeries.Text.Trim();
-                newEmployee.PassportNumber = TxtPassportNumber.Text.Trim();
-                newEmployee.PassportGivenBy = TxtPassportIssuedBy.Text.Trim();
-                newEmployee.PassportGivenDateGivenBy = DpPassportDate?.SelectedDate;
-                newEmployee.Registration = TxtRegistration.Text.Trim();
-                newEmployee.INN = TxtINN.Text.Trim();
-                newEmployee.SNILS = TxtSNILS.Text.Trim();
-                newEmployee.Post = TxtPost.Text.Trim();
+                // Заполняем поля
+                employee.FullName = TxtFullName.Text.Trim();
+                employee.EmployeeBirthDate = DpBirthDate.SelectedDate ?? DateTime.Today;
+                employee.PassportSeries = TxtPassportSeries.Text.Trim();
+                employee.PassportNumber = TxtPassportNumber.Text.Trim();
+                employee.PassportGivenBy = TxtPassportIssuedBy.Text.Trim();
+                employee.PassportGivenDateGivenBy = DpPassportDate?.SelectedDate;
+                employee.NumberPhone = TxtPhone.Text.Trim();
+                employee.Email = TxtEmail.Text.Trim();
+                employee.Adress = TxtAddress.Text.Trim();
+                employee.Registration = TxtRegistration.Text.Trim();
+                employee.INN = TxtINN.Text.Trim();
+                employee.SNILS = TxtSNILS.Text.Trim();
+                employee.Post = TxtPost.Text.Trim();
 
-                // добавляем или обновляем сотрудника в базе данных
-                _context.Employees.Add(newEmployee);
                 _context.SaveChanges();
 
-                _context.Entry(newEmployee).Reload();
-
-                MessageBox.Show("Сотрудник сохранён", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Сотрудник сохранён",
+                                "Успех", 
+                                MessageBoxButton.OK, 
+                                MessageBoxImage.Information);
 
                 this.DialogResult = true;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} {ex.InnerException}", 
-                                "Ошибка", 
-                                MessageBoxButton.OK, 
+                MessageBox.Show($"{ex.Message} {ex.InnerException}",
+                                "Ошибка",
+                                MessageBoxButton.OK,
                                 MessageBoxImage.Error);
 
                 if (_editingEmployee == null)
                 {
-                    // Если произошла ошибка при добавлении нового сотрудника, удаляем его из базы данных
-                    _context.Employees.Remove(newEmployee);
+                    _context.Employees.Remove(employee);
                 }
             }
         }

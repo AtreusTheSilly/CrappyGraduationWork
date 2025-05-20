@@ -18,14 +18,22 @@ namespace Diplom
 
         private void LoadEmployees()
         {
-            EmployeeDataGrid.ItemsSource = _context.Employees.ToList();
+            try
+            {
+                EmployeeDataGrid.ItemsSource = _context.Employees.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void EmployeeDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (EmployeeDataGrid.SelectedItem is Employee selectedEmployee)
             {
-                AddEmployeeWindow editWindow = new AddEmployeeWindow(selectedEmployee);
+                AddEmployeeWindow editWindow = new AddEmployeeWindow(selectedEmployee, _context);
                 this.IsEnabled = false;
                 if (editWindow.ShowDialog() == true)
                 {
